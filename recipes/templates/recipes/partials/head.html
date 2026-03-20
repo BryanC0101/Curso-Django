@@ -23,6 +23,7 @@
 
         body {
             font-size: 1.6rem;
+            background: rgb(230, 230, 230);
         }
 
         .main-logo {
@@ -50,13 +51,58 @@
         .container {
             max-width: 144rem;
             margin: 0 auto;
-            padding: 3rem
+            padding: 3rem;
         }
 
         .main-header-container {
-            background: #13141f
+            background: #13141f;
         }
 
+        .search-form {
+            border: .2rem solid #13141f;
+            max-width: 64rem;
+            margin: 0 auto;
+            border-radius: 4px;
+            position: relative;
+            transition: all 150ms ease-in-out;
+        }
+        
+        .search-form:focus-within {
+            border-color: #3b90d6;
+            background: #fff;
+        }
+
+        .search-form:focus-within .search-button {
+            color: #3b90d6;
+        }
+
+        .search-button:hover{
+            cursor: pointer;
+            outline: 1pc solid color(#13141f);
+            background: rgba(0, 0, 0, 0.093);
+            border-radius: 4px;
+        }
+
+        .search-input,
+        .search-button {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 1rem;
+            transition: all 150ms ease-in-out;
+        }
+
+        .search-input {
+            width: 100%;
+            padding-right: 3rem;
+            box-shadow: 2px 4px 4px rgba(15, 11, 11, 0.099);
+        }
+
+        .search-button{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
 
     </style>
 </head>
