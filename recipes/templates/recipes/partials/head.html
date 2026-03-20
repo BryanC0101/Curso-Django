@@ -10,6 +10,7 @@
 
     <title>Recipes</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
         * {
             padding: 0;
             margin: 0;
@@ -23,19 +24,39 @@
         body {
             font-size: 1.6rem;
         }
+
+        .main-logo {
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .main-logo-icon {
+            margin-right: 1rem;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .container {
+            max-width: 144rem;
+            margin: 0 auto;
+            padding: 3rem
+        }
+
+        .main-header-container {
+            background: #13141f
+        }
+
+
     </style>
 </head>
-<body>
-    <header class="main-header-container">
-        <div class="main-header container">
-            <h1>
-                <a href="/">
-                    <i class="fa-solid fa-utensils"></i>
-                    <span>Testing Django with recipes {{ name }}</span>
-                </a>    
-            </h1> 
-        </div>
-    </header>
-
-</body>
-</html>
