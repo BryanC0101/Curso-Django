@@ -1,17 +1,16 @@
 {% include "recipes/partials/head.html" %}
 
 <body>
-    {% include "recipes/pages/header.html" %}
+    {% include "recipes/partials/header.html" %}
+    {% include "recipes/partials/search.html" %}
 
-    <div class="search-container">
-        <div class='container'>
-            <form action="" class="search-form">
-                <input type="search" class="search-input" name="search" placeholder="Search for a recipe...">
-                <button type="submit" class='search-button'><i class="fa-solid fa-magnifying-glass"></i></button>
-                    
-            </form>
+    <main class="main-content-container">
+        <div class="main-content .main-content container">
+            <div class="recipe recipe-list-item">
+                <img src="https://www.skymsen.com/uploads/blog/como-fazer-hamburguer-recheado-passo-a-passo-para-surpreender-os-clientes.jpg" alt="Temporário">
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
