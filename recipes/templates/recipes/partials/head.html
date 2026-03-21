@@ -11,6 +11,17 @@
     <title>Recipes</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+        :root {
+            --white-primary: #fff;
+            --black-primary: #222222;
+            --medium-padding: 3rem;
+            --gray-color: #9b9b9b;
+            --gray-color-light: #dbd9d9;
+            --blue-primay: #3b90d6;
+            --blue-primay-dark: #081c2e;
+        }
+
         * {
             padding: 0;
             margin: 0;
@@ -22,6 +33,7 @@
         }
 
         body {
+            font-family: 'Roboto Slab', serif;
             font-size: 1.6rem;
             background: rgb(230, 230, 230);
         }
@@ -45,7 +57,7 @@
         }
 
         h1,h2,h3,h4,h5,h6 {
-            font-family: 'Roboto Slab', serif;
+            color: var(--black-primary)
         }
 
         .container {
@@ -68,12 +80,12 @@
         }
         
         .search-form:focus-within {
-            border-color: #3b90d6;
-            background: #fff;
+            border-color: var(--blue-primay);
+            background: var(--white-primary);
         }
 
         .search-form:focus-within .search-button {
-            color: #3b90d6;
+            color: var(--blue-primay);
         }
 
         .search-button:hover{
@@ -114,8 +126,83 @@
             gap: 4rem;
         }
 
+        .recipe {
+            background: var(--white-primary);
+            box-shadow: -5px 5px 10px rgba(15, 11, 11, 0.2);
+            transition: all 300ms ease-in-out;
+            transform: scale(1);
+            border-radius: .4rem;
+            overflow: hidden;
+        }
+
         .recipe img{
             max-width: 100%;
+        }
+
+        .recipe-list-item {
+            max-width: 64rem;
+        }
+        .recipe-list-item:hover {
+            transform: scale(1.05);
+            box-shadow: -8px 8px 18px rgba(15, 11, 11, 0.3);
+        }
+
+        .recipe-title-container{
+            padding: var(--medium-padding);
+            padding-bottom: 2rem;
+        }
+
+        .recipe-author {
+            padding: var(--medium-padding);
+        }
+
+        .recipe-author-item {
+            color: var(--gray-color);
+            margin-right: 1rem;
+        }
+
+        .recipe-author a{
+            color: var(--blue-primay);
+            transition: all 300ms ease-in-out;
+            text-decoration: none;
+        }
+
+        .recipe-author a:hover {
+            color: var(--blue-primay-dark);
+        }
+
+        .recipe-content {
+            padding: var(--medium-padding);
+            padding-top: 2rem;
+        }
+
+        .recipe-meta-container {
+            display: flex;
+            flex-flow: row wrap;
+            padding: var(--medium-padding);
+            background: var(--gray-color-light);
+        }
+
+        .recipe-meta {
+            display: flex;
+            flex-flow: column nowrap;
+            flex-shrink: 1;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .recipe-footer a{
+            background: var(--blue-primay-dark);
+            display: block;
+            color: var(--white-primary);
+            text-decoration: none;
+            text-align: center;
+            padding: 2rem var(--medium-padding);
+            transition: all 300ms ease-in-out
+        }
+
+        .recipe-footer a:hover {
+            filter: brightness(2);
         }
     </style>
 </head>
